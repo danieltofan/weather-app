@@ -8,7 +8,7 @@ import BootstrapVue from "bootstrap-vue"
 import VueGeolocation from 'vue-browser-geolocation'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-import VueMoment from 'vue-moment'
+
 import Toaster from 'v-toaster'
 
 // Import style sheets and fonts separately
@@ -28,7 +28,6 @@ Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.use(VueGeolocation)
 Vue.use(VueAxios, axios)
-Vue.use(VueMoment)
 Vue.use(Toaster, {timeout: 4000})
 
 let app

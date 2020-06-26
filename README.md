@@ -1,6 +1,7 @@
 # weather-app
 
-> A simple weather conditions app
+> A simple weather conditions app that compares your local weather to the weather in New York City.
+This was created as a small coding challenge in Vue.
 
 ## Project setup
 ```

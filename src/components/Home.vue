@@ -21,7 +21,7 @@
               <weather-table :weather="myWeather"></weather-table>
             </keep-alive>
             <b-card-body class="p-1 pt-2">
-              <small v-if="myWeather.dt" class="text-success">Last checked: {{(myWeather.dt | moment('from', 'now')) || 'never'}}</small>
+              <small v-if="myWeather.dt" class="text-success">Last checked: {{ myWeather.dt | moment("from") }}</small>
             </b-card-body>
         </b-card>
 
@@ -38,7 +38,7 @@
               <weather-table :weather="weatherNy"></weather-table>
             </keep-alive>
             <b-card-body class="p-1 pt-2">
-              <small v-if="weatherNy.dt" class="text-info">Last checked: {{(weatherNy.dt | moment('from', 'now')) || 'never'}}</small>
+              <small v-if="weatherNy.dt" class="text-info">Last checked: {{ myWeather.dt | moment("from") }}</small>
             </b-card-body>
         </b-card>
       </b-card-group>
@@ -56,6 +56,8 @@
 import firebase from 'firebase'
 import Vue from 'vue'
 import WeatherTable from '@/components/WeatherTable'
+
+Vue.use(require('vue-moment'))
 
 /**
  * This component is the main (home) view, available after authentication.
@@ -82,9 +84,6 @@ export default {
     },
     getWeatherForLocation: function() {
       console.log('Getting weather info')
-      console.log(process.env)
-      console.log(process.env.VUE_APP_WEATHER_API_URL)
-      console.log(process.env.VUE_APP_WEATHER_API_KEY)
       // get the geo location for the current user
       this.$getLocation()
       .then(coords => {
