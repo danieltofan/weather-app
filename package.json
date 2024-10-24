@@ -18,7 +18,7 @@
     "firebase": "^10.12.5",
     "register-service-worker": "^1.7.1",
     "v-toaster": "^1.0.3",
-    "vue": "^2.6.11",
+    "vue": "^3.0.0",
     "vue-axios": "^2.1.5",
     "vue-browser-geolocation": "^1.8.0",
     "vue-fullpage.js": "^0.2.7",
